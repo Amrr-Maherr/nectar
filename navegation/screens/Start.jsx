@@ -1,7 +1,7 @@
 import { Image, ImageBackground, Pressable, Text, View } from "react-native";
 import MainButton from "../../components/ui/MainButton";
 
-export default function Start() {
+export default function Start({navigation}) {
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground
@@ -13,8 +13,11 @@ export default function Start() {
           alignItems: "center",
           paddingVertical: 90,
         }}
-          >
-        <Image style={{width:54.7,height:63.61}} source={require("../../assets/nectar_logo.png")} />
+      >
+        <Image
+          style={{ width: 54.7, height: 63.61 }}
+          source={require("../../assets/nectar_logo.png")}
+        />
         <Text
           style={{
             fontSize: 50,
@@ -35,7 +38,12 @@ export default function Start() {
         >
           Ger your groceries in as fast as one hour
         </Text>
-        <MainButton buttonText="Get Started"/>
+        <MainButton
+          buttonText="Get Started"
+          onpress={() => navigation.navigate("GoogleLogin")}
+          bgColor="#53B175"
+          marginTop={40}
+        />
       </ImageBackground>
     </View>
   );
