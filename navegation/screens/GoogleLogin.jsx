@@ -1,6 +1,8 @@
 import { Image, Text, View } from "react-native"
 import { Pressable, TextInput } from "react-native-gesture-handler";
 import MainButton from "../../components/ui/MainButton"
+import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome } from "@expo/vector-icons";
 export default function GoogleLogin({navigation}) {
     return (
       <>
@@ -45,10 +47,15 @@ export default function GoogleLogin({navigation}) {
               marginTop={20}
               marginBottom={20}
               bgColor="#5383EC"
+              icon={<Ionicons name="logo-google" size={20} color="white" />}
             />
           </View>
           <View style={{ alignItems: "center", justifyContent: "center" }}>
-            <MainButton buttonText="Continue with Facebook" bgColor="#4A66AC" />
+            <MainButton
+              buttonText="Continue with Facebook"
+              bgColor="#4A66AC"
+              icon={<FontAwesome name="facebook" size={20} color="white" />}
+            />
           </View>
           <View
             style={{
