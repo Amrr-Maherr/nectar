@@ -28,8 +28,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "2adca215-3e66-4f3e-93f3-f2f8b0606cde"
+        "projectId": "7ebc716b-ce6f-488f-a840-ac1f1e6e74d1"
       }
-    }
+    },
+    "owner": "amr_maher"
   }
 }
