@@ -1,8 +1,15 @@
-import { Image, Text, TextInput, View, Dimensions, Pressable } from "react-native";
+import {
+  Image,
+  Text,
+  TextInput,
+  View,
+  Dimensions,
+  Pressable,
+} from "react-native";
 import MainButton from "../../components/ui/MainButton";
-import Title from "../../components/AuthComponents/Title";
+import Title from "../../components/UiComponents/Title";
 
-export default function Login({navigation}) {
+export default function Login({ navigation }) {
   return (
     <View
       style={{
@@ -22,7 +29,13 @@ export default function Login({navigation}) {
           justifyContent: "center",
         }}
       >
-        <View style={{ width: "100%", paddingHorizontal: 25,alignItems:"flex-start" }}>
+        <View
+          style={{
+            width: "100%",
+            paddingHorizontal: 25,
+            alignItems: "flex-start",
+          }}
+        >
           <Title
             titleText="Login"
             marginBottom={15}

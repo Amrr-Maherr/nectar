@@ -1,5 +1,5 @@
 import { View, Text, TextInput, Pressable, Image } from "react-native";
-import Title from "../../components/AuthComponents/Title";
+import Title from "../../components/UiComponents/Title";
 import MainButton from "../../components/ui/MainButton";
 
 export default function ForgetPassword({ navigation }) {
@@ -16,7 +16,7 @@ export default function ForgetPassword({ navigation }) {
       <View>
         <Image source={require("../../assets/Group.png")} />
       </View>
-      <View style={{ width: "100%",alignItems:"flex-start" }}>
+      <View style={{ width: "100%", alignItems: "flex-start" }}>
         <Title
           titleText="Forgot Password"
           marginBottom={15}

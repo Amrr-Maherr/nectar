@@ -3,6 +3,7 @@ import { Pressable, TextInput } from "react-native-gesture-handler";
 import MainButton from "../../components/ui/MainButton"
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
+import Link from "../../components/UiComponents/Link";
 export default function GoogleLogin({navigation}) {
     return (
       <>
@@ -65,21 +66,9 @@ export default function GoogleLogin({navigation}) {
               marginTop: 15,
             }}
           >
-            <Pressable
-              onPress={() => {
-                navigation.navigate("Login");
-              }}
-            >
-              <Text
-                style={{
-                  color: "#007AFF",
-                  textDecorationLine: "underline",
-                  fontSize: 16,
-                }}
-              >
-                Skip
-              </Text>
-            </Pressable>
+            <Link LinkText="Skip" onPress={() => {
+              navigation.navigate("Location")
+            }}/>
           </View>
         </View>
       </>
