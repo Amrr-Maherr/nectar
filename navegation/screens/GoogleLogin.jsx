@@ -29,7 +29,8 @@ export default function GoogleLogin({navigation}) {
           <View style={{ paddingHorizontal: 24, marginVertical: 30 }}>
             <TextInput
               placeholder="Enter your email"
-              style={{ borderBottomWidth: 1, borderBottomColor: "gray" }}
+              placeholderTextColor="#7C7C7C"
+              style={{ borderBottomWidth: 1, borderBottomColor: "gray",fontSize:16 }}
             />
           </View>
           <View
