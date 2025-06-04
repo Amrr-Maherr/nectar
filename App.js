@@ -6,6 +6,7 @@ import GoogleLogin from './navegation/screens/GoogleLogin';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import Login from './navegation/screens/Login';
 import Register from './navegation/screens/Register';
+import ForgetPassword from './navegation/screens/ForgetPassword';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Forget-password" component={ForgetPassword} />
         </Stack.Navigator>
       </NavigationContainer>
     </GestureHandlerRootView>

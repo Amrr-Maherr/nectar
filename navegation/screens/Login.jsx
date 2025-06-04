@@ -66,7 +66,21 @@ export default function Login({navigation}) {
             marginTop: 20,
           }}
         >
-          <Text style={{ textAlign: "right" }}>Forgot Password?</Text>
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Forget-password");
+            }}
+          >
+            <Text
+              style={{
+                color: "#007AFF",
+                textDecorationLine: "underline",
+                fontSize: 16,
+              }}
+            >
+              Forgot Password?
+            </Text>
+          </Pressable>
         </View>
         <View>
           <MainButton
