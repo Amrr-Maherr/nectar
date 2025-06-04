@@ -22,7 +22,7 @@ export default function Login({navigation}) {
           justifyContent: "center",
         }}
       >
-        <View style={{ width: "100%", paddingHorizontal: 25 }}>
+        <View style={{ width: "100%", paddingHorizontal: 25,alignItems:"flex-start" }}>
           <Title
             titleText="Login"
             marginBottom={15}

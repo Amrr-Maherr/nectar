@@ -12,11 +12,11 @@ export default function ForgetPassword({ navigation }) {
         backgroundColor: "white",
         paddingHorizontal: 25,
       }}
-      >
-        <View>
-            <Image source={require("../../assets/Group.png")} />
-          </View>
-      <View style={{ width: "100%" }}>
+    >
+      <View>
+        <Image source={require("../../assets/Group.png")} />
+      </View>
+      <View style={{ width: "100%",alignItems:"flex-start" }}>
         <Title
           titleText="Forgot Password"
           marginBottom={15}
@@ -43,18 +43,6 @@ export default function ForgetPassword({ navigation }) {
           marginTop={0}
           marginBottom={20}
         />
-        <Pressable onPress={() => navigation.goBack()}>
-          <Text
-            style={{
-              color: "#007AFF",
-              textDecorationLine: "underline",
-              textAlign: "center",
-              fontSize: 16,
-            }}
-          >
-            Back to Login
-          </Text>
-        </Pressable>
       </View>
     </View>
   );
