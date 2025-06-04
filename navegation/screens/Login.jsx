@@ -23,7 +23,12 @@ export default function Login({navigation}) {
         }}
       >
         <View style={{ width: "100%", paddingHorizontal: 25 }}>
-          <Title titleText="Login" marginBottom={15} FontSize={26} FontWeight="bold"/>
+          <Title
+            titleText="Login"
+            marginBottom={15}
+            FontSize={26}
+            FontWeight="bold"
+          />
           <Text style={{ fontSize: 16 }}>Enter your emails and password</Text>
         </View>
         <View
@@ -31,19 +36,23 @@ export default function Login({navigation}) {
         >
           <TextInput
             placeholder="Enter your email"
+            placeholderTextColor="#7C7C7C"
             style={{
               borderBottomWidth: 1,
               borderBottomColor: "gray",
               width: "100%",
               marginBottom: 20,
+              fontSize: 16,
             }}
           />
           <TextInput
+            placeholderTextColor="#7C7C7C"
             placeholder="Enter your password"
             style={{
               borderBottomWidth: 1,
               borderBottomColor: "gray",
               width: "100%",
+              fontSize: 16,
             }}
           />
         </View>

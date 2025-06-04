@@ -11,14 +11,14 @@ export default function MainButton({ buttonText, onpress,marginTop,marginBottom,
           height: 67,
           alignItems: "center",
           justifyContent: "center",
-          gap:30,
-          flexDirection:"row",
+          gap: 30,
+          flexDirection: "row",
           borderRadius: 19,
           marginTop: marginTop,
           marginBottom: marginBottom,
         }}
       >
-        <View style={{ marginRight: 5 }}>{icon}</View>
+        {icon && <View style={{ marginRight: 5 }}>{icon}</View>}
         <Text style={{ color: "white", fontSize: 16 }}>{buttonText}</Text>
       </Pressable>
     </>
