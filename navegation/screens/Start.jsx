@@ -42,6 +42,9 @@ export default function Start({navigation}) {
           buttonText="Get Started"
           onpress={() => navigation.navigate("Location")}
           bgColor="#53B175"
+          FontWeight="600"
+          FontSize={16}
+          color="#FFF9FF"
           marginTop={40}
         />
       </ImageBackground>

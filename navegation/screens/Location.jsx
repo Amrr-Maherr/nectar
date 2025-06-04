@@ -23,6 +23,7 @@ export default function Location({ navigation }) {
               titleText="Enter Your Location"
               FontSize={26}
               marginBottom={15}
+              FontWeight="600"
             />
             <Title
               titleText="Swithch on your location to stay in tune with what’s happening in your area"
@@ -45,6 +46,9 @@ export default function Location({ navigation }) {
               buttonText="Submit"
               bgColor="#53B175"
               marginTop={40}
+              FontWeight="600"
+              FontSize={16}
+              color="#FFF9FF"
               onpress={() => {
                 navigation.navigate("Login");
               }}

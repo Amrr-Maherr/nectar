@@ -4,6 +4,7 @@ import MainButton from "../../components/ui/MainButton"
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import Link from "../../components/UiComponents/Link";
+import Description from "../../components/UiComponents/Description";
 export default function GoogleLogin({navigation}) {
     return (
       <>
@@ -23,7 +24,7 @@ export default function GoogleLogin({navigation}) {
             />
           </View>
           <View style={{ paddingHorizontal: 24 }}>
-            <Text style={{ fontSize: 26, fontWeight: 500, marginBottom: 30 }}>
+            <Text style={{ fontSize: 26, fontWeight: 600, marginBottom: 30 }}>
               Get your groceries{"\n"}with nectar
             </Text>
           </View>
@@ -31,7 +32,11 @@ export default function GoogleLogin({navigation}) {
             <TextInput
               placeholder="Enter your email"
               placeholderTextColor="#7C7C7C"
-              style={{ borderBottomWidth: 1, borderBottomColor: "#E2E2E2",fontSize:16 }}
+              style={{
+                borderBottomWidth: 1,
+                borderBottomColor: "#E2E2E2",
+                fontSize: 16,
+              }}
             />
           </View>
           <View
@@ -41,22 +46,33 @@ export default function GoogleLogin({navigation}) {
               justifyContent: "center",
             }}
           >
-            <Text style={{ fontSize: 14 }}>Or connect with social media</Text>
+            <Description
+              DescriptionText="Or connect with social media"
+              FontSize={14}
+              color="#828282"
+              FontWeight="500"
+            />
           </View>
           <View style={{ alignItems: "center", justifyContent: "center" }}>
             <MainButton
               buttonText="Continue with Google"
               marginTop={20}
               marginBottom={20}
+              FontWeight="600"
+              FontSize={16}
+              color="#FFF9FF"
               bgColor="#5383EC"
-              icon={<Ionicons name="logo-google" size={20} color="white" />}
+              icon={<Ionicons name="logo-google" size={25} color="white" />}
             />
           </View>
           <View style={{ alignItems: "center", justifyContent: "center" }}>
             <MainButton
               buttonText="Continue with Facebook"
+              FontWeight="600"
+              FontSize={16}
+              color="#FFF9FF"
               bgColor="#4A66AC"
-              icon={<FontAwesome name="facebook" size={20} color="white" />}
+              icon={<FontAwesome name="facebook" size={25} color="white" />}
             />
           </View>
           <View
@@ -66,9 +82,12 @@ export default function GoogleLogin({navigation}) {
               marginTop: 15,
             }}
           >
-            <Link LinkText="Skip" onPress={() => {
-              navigation.navigate("Location")
-            }}/>
+            <Link
+              LinkText="Skip"
+              onPress={() => {
+                navigation.navigate("Location");
+              }}
+            />
           </View>
         </View>
       </>

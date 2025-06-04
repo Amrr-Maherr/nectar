@@ -114,7 +114,7 @@ export default function Login({ navigation }) {
           <Text>Don’t have an account?</Text>
           <Pressable
             onPress={() => {
-              navigation.navigate("Register");
+              navigation.navigate("Tabs");
             }}
           >
             <Text
