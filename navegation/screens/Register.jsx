@@ -7,8 +7,8 @@ export default function Register({ navigation }) {
       style={{
         flex: 1,
         justifyContent: "space-evenly",
-              alignItems: "center",
-        backgroundColor:"white"
+        alignItems: "center",
+        backgroundColor: "white",
       }}
     >
       <View>
@@ -34,7 +34,7 @@ export default function Register({ navigation }) {
             placeholder="Enter your name"
             style={{
               borderBottomWidth: 1,
-              borderBottomColor: "gray",
+              borderBottomColor: "#E2E2E2",
               width: "100%",
               marginBottom: 20,
             }}
@@ -43,7 +43,7 @@ export default function Register({ navigation }) {
             placeholder="Enter your email"
             style={{
               borderBottomWidth: 1,
-              borderBottomColor: "gray",
+              borderBottomColor: "#E2E2E2",
               width: "100%",
               marginBottom: 20,
             }}
@@ -53,7 +53,7 @@ export default function Register({ navigation }) {
             secureTextEntry
             style={{
               borderBottomWidth: 1,
-              borderBottomColor: "gray",
+              borderBottomColor: "#E2E2E2",
               width: "100%",
             }}
           />

@@ -1,9 +1,9 @@
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, TouchableOpacity, View } from "react-native";
 
 export default function MainButton({ buttonText, onpress,marginTop,marginBottom,bgColor,icon }) {
   return (
     <>
-      <Pressable
+      <TouchableOpacity
         onPress={onpress}
         style={{
           backgroundColor: bgColor,
@@ -20,7 +20,7 @@ export default function MainButton({ buttonText, onpress,marginTop,marginBottom,
       >
         {icon && <View style={{ marginRight: 5 }}>{icon}</View>}
         <Text style={{ color: "white", fontSize: 16 }}>{buttonText}</Text>
-      </Pressable>
+      </TouchableOpacity>
     </>
   );
 }

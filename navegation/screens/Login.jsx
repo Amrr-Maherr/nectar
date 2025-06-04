@@ -39,7 +39,7 @@ export default function Login({navigation}) {
             placeholderTextColor="#7C7C7C"
             style={{
               borderBottomWidth: 1,
-              borderBottomColor: "gray",
+              borderBottomColor: "#E2E2E2",
               width: "100%",
               marginBottom: 20,
               fontSize: 16,
@@ -50,7 +50,7 @@ export default function Login({navigation}) {
             placeholder="Enter your password"
             style={{
               borderBottomWidth: 1,
-              borderBottomColor: "gray",
+              borderBottomColor: "#E2E2E2",
               width: "100%",
               fontSize: 16,
             }}

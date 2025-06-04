@@ -30,7 +30,7 @@ export default function GoogleLogin({navigation}) {
             <TextInput
               placeholder="Enter your email"
               placeholderTextColor="#7C7C7C"
-              style={{ borderBottomWidth: 1, borderBottomColor: "gray",fontSize:16 }}
+              style={{ borderBottomWidth: 1, borderBottomColor: "#E2E2E2",fontSize:16 }}
             />
           </View>
           <View
