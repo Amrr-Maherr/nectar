@@ -6,7 +6,7 @@ import Title from "../../components/UiComponents/Title";
 import NextButton from "../../components/ui/NextButton";
 import BackButton from "../../components/ui/BackButton";
 
-export default function MobileNumber() {
+export default function MobileNumber({navigation}) {
   const phoneInput = useRef(null);
 
   return (
@@ -63,7 +63,9 @@ export default function MobileNumber() {
           paddingVertical: 10,
         }}
       >
-        <NextButton />
+        <NextButton onPress={() => {
+          navigation.navigate("Code")
+        }}/>
       </View>
     </View>
   );

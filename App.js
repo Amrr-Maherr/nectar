@@ -10,6 +10,7 @@ import ForgetPassword from './navegation/screens/ForgetPassword';
 import Location from './navegation/screens/Location';
 import Tabs from './navegation/(tabs)/Tabs';
 import MobileNumber from './navegation/screens/MobileNumber';
+import Code from './navegation/screens/Code';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Stack.Screen name="Forget-password" component={ForgetPassword} />
           <Stack.Screen name="Location" component={Location} />
           <Stack.Screen name="MobileNumber" component={MobileNumber} />
+          <Stack.Screen name="Code" component={Code} />
           <Stack.Screen name="Tabs" component={Tabs} />
         </Stack.Navigator>
       </NavigationContainer>
