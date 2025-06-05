@@ -1,10 +1,9 @@
 import { Text, View, StyleSheet } from "react-native";
+import ProductSection from "../../components/ProductComponent/ProductSection";
 
 export default function Shop() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Shop</Text>
-    </View>
+   <ProductSection/>
   );
 }
 
