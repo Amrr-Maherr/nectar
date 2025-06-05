@@ -63,7 +63,7 @@ export default function Home() {
             FontWeight="500"
           />
         </View>
-        <ProductSection />
+        <ProductSection direction={true}/>
         <HomeBanner />
       </ScrollView>
     </SafeAreaView>

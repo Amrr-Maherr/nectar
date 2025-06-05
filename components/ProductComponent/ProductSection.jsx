@@ -1,14 +1,14 @@
 import { ScrollView, View } from "react-native";
 import ProductCard from "./ProductCard";
 
-export default function ProductSection() {
+export default function ProductSection({direction}) {
     return (
       <>
-        <ScrollView showsHorizontalScrollIndicator={false} horizontal={true}>
+        <ScrollView showsHorizontalScrollIndicator={false} horizontal={direction} >
           <View
             style={{
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "space-evenly",
               flexWrap: "wrap",
               flexDirection: "row",
             }}

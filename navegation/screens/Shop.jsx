@@ -1,9 +1,29 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, SafeAreaView } from "react-native";
 import ProductSection from "../../components/ProductComponent/ProductSection";
+import { ScrollView } from "react-native";
+import SearchInput from "../../components/UiComponents/SearchInput";
 
 export default function Shop() {
   return (
-   <ProductSection/>
+    <>
+      <SafeAreaView>
+        <View
+          style={{
+            backgroundColor: "white",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingTop:10
+          }}
+        >
+          <SearchInput />
+        </View>
+        <ScrollView>
+          <View style={{ backgroundColor:"white" }}>
+            <ProductSection direction={false} />
+          </View>
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
 }
 

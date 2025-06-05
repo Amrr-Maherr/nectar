@@ -15,7 +15,7 @@ export default function ProductCard() {
             justifyContent: "space-between",
             borderColor: "#7C7C7C",
             borderWidth: 1,
-            marginRight:10
+            margin:10
           }}
         >
           <View style={{ width: 100, height: 100 }}>
