@@ -85,7 +85,7 @@ export default function GoogleLogin({navigation}) {
             <Link
               LinkText="Skip"
               onPress={() => {
-                navigation.navigate("Location");
+                navigation.navigate("MobileNumber");
               }}
             />
           </View>

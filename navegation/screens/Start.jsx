@@ -40,7 +40,7 @@ export default function Start({navigation}) {
         </Text>
         <MainButton
           buttonText="Get Started"
-          onpress={() => navigation.navigate("Location")}
+          onpress={() => navigation.navigate("GoogleLogin")}
           bgColor="#53B175"
           FontWeight="600"
           FontSize={16}

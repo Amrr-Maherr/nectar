@@ -17,7 +17,6 @@ export default function Title({
           marginTop: marginTop,
           fontSize: FontSize,
           fontWeight: FontWeight,
-          textAlign: "center",
         }}
       >
         {titleText}
