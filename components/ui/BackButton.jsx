@@ -7,6 +7,7 @@ export default function BackButton() {
 
   return (
     <TouchableOpacity
+      style={{marginBottom:65}}
       onPress={() => {
         navigation.goBack();
       }}

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { View, StyleSheet } from "react-native";
 import PhoneInput from "react-native-phone-number-input";
 import Description from "../../components/UiComponents/Description";
@@ -8,7 +8,15 @@ import BackButton from "../../components/ui/BackButton";
 
 export default function MobileNumber({navigation}) {
   const phoneInput = useRef(null);
-
+  const [Number, setNumber] = useState("")
+  console.log(Number);
+  const HandelMobileNumber = () => {
+    if (!Number) {
+      alert("please enter a valid mobile number")
+    } else {
+      navigation.navigate("Code")
+    }
+  }
   return (
     <View
       style={{
@@ -19,7 +27,7 @@ export default function MobileNumber({navigation}) {
         paddingHorizontal: 25,
       }}
     >
-      <View style={{ alignItems: "flex-start",width:"100%" }}>
+      <View style={{ alignItems: "flex-start", width: "100%" }}>
         <BackButton />
       </View>
       <View style={{ alignItems: "flex-end" }}>
@@ -34,9 +42,13 @@ export default function MobileNumber({navigation}) {
         <Description
           DescriptionText="Mobile Number"
           FontSize={16}
-          FontWeight="300"
+          FontWeight="500"
+          color="#7C7C7C"
         />
         <PhoneInput
+          onChangeText={(text) => {
+            setNumber(text);
+          }}
           ref={phoneInput}
           defaultCode="EG"
           placeholderTextColor="#7C7C7C"
@@ -63,9 +75,11 @@ export default function MobileNumber({navigation}) {
           paddingVertical: 10,
         }}
       >
-        <NextButton onPress={() => {
-          navigation.navigate("Code")
-        }}/>
+        <NextButton
+          onPress={() => {
+            HandelMobileNumber();
+          }}
+        />
       </View>
     </View>
   );
