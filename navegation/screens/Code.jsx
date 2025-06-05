@@ -3,8 +3,17 @@ import BackButton from "../../components/ui/BackButton";
 import Title from "../../components/UiComponents/Title";
 import Description from "../../components/UiComponents/Description";
 import NextButton from "../../components/ui/NextButton";
+import { useState } from "react";
 
 export default function Code({ navigation }) {
+  const [code, setCode] = useState("")
+  const HandelCode = () => {
+    if (!code || code.length < 4) {
+      alert("please enter a valid code")
+    } else {
+      navigation.navigate("Login");
+    }
+  }
   return (
     <>
       <View
@@ -42,6 +51,9 @@ export default function Code({ navigation }) {
             FontWeight="500"
           />
           <TextInput
+            onChangeText={(text) => {
+              setCode(text);
+            }}
             keyboardType="numeric"
             maxLength={4}
             placeholder="- - - -"
@@ -64,7 +76,7 @@ export default function Code({ navigation }) {
         >
           <NextButton
             onPress={() => {
-              navigation.navigate("Login");
+              HandelCode()
             }}
           />
         </View>

@@ -9,7 +9,6 @@ import BackButton from "../../components/ui/BackButton";
 export default function MobileNumber({navigation}) {
   const phoneInput = useRef(null);
   const [Number, setNumber] = useState("")
-  console.log(Number);
   const HandelMobileNumber = () => {
     if (!Number) {
       alert("please enter a valid mobile number")
