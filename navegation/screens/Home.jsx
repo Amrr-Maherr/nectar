@@ -13,6 +13,7 @@ import HomeBanner from "../../components/HomeComponents/HomeBanner";
 import { useEffect, useState } from "react";
 import Title from "../../components/UiComponents/Title";
 import ProductSection from "../../components/ProductComponent/ProductSection";
+import HomeCategory from "../../components/HomeComponents/HomeCategory";
 
 export default function Home() {
   const [Loading, setLoading] = useState(true);
@@ -63,8 +64,9 @@ export default function Home() {
             FontWeight="500"
           />
         </View>
-        <ProductSection direction={true}/>
-        <HomeBanner />
+        <ProductSection direction={true} />
+        <HomeCategory />
+        <ProductSection direction={true} />
       </ScrollView>
     </SafeAreaView>
   );
