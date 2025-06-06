@@ -32,7 +32,11 @@ export default function ProductCard({product}) {
             }}
           >
             <Title titleText={product.title.slice(0, 10)} />
-            <Title titleText={product.brand.name} FontSize={14} color="#7C7C7C" />
+            <Title
+              titleText={product.brand.name}
+              FontSize={14}
+              color="#7C7C7C"
+            />
           </View>
           <View
             style={{

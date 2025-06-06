@@ -5,24 +5,24 @@ import SearchInput from "../../components/UiComponents/SearchInput";
 
 export default function Shop() {
   return (
-    <>
+    <><ScrollView>
       <SafeAreaView>
         <View
           style={{
             backgroundColor: "white",
             alignItems: "center",
             justifyContent: "center",
-            paddingTop:10
+            paddingTop: 10,
           }}
         >
           <SearchInput />
         </View>
-        <ScrollView>
-          <View style={{ backgroundColor:"white" }}>
+        
+          <View style={{ backgroundColor: "white" }}>
             <ProductSection direction={false} />
           </View>
-        </ScrollView>
       </SafeAreaView>
+        </ScrollView>
     </>
   );
 }

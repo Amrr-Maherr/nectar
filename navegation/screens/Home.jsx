@@ -64,9 +64,9 @@ export default function Home() {
             FontWeight="500"
           />
         </View>
-        <ProductSection direction={true} />
+        <ProductSection direction={true} productNumber={10} />
         <HomeCategory />
-        <ProductSection direction={true} />
+        <ProductSection direction={true} productNumber={5} />
       </ScrollView>
     </SafeAreaView>
   );

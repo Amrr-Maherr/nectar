@@ -3,20 +3,20 @@ import ProductCard from "./ProductCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function ProductSection({ direction }) {
+export default function ProductSection({ direction,productNumber }) {
     const [data,setData] = useState([])
     const GetData = async () => {
         try {
             let response = await axios.get("https://ecommerce.routemisr.com/api/v1/products")
-        setData(response.data.data.slice(0,10))
+        setData(response.data.data.slice(0, productNumber));
         console.log(response.data.data); 
         } catch (error) {
             console.log(error);
         }
     }
     useEffect(() => {
-        GetData()
-    },[])
+      GetData();
+    }, [productNumber]);
     return (
       <>
         <ScrollView
