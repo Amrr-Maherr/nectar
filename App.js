@@ -14,24 +14,26 @@ import Code from './navegation/screens/Code';
 const Stack = createNativeStackNavigator();
 export default function App() {
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{ headerShown: false }}
-          initialRouteName="Tabs"
-        >
-          <Stack.Screen name="Splash" component={Splash} />
-          <Stack.Screen name="Start" component={Start} />
-          <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Register" component={Register} />
-          <Stack.Screen name="Forget-password" component={ForgetPassword} />
-          <Stack.Screen name="Location" component={Location} />
-          <Stack.Screen name="MobileNumber" component={MobileNumber} />
-          <Stack.Screen name="Code" component={Code} />
-          <Stack.Screen name="Tabs" component={Tabs} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    </GestureHandlerRootView>
+    <>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{ headerShown: false }}
+            initialRouteName="Splash"
+          >
+            <Stack.Screen name="Splash" component={Splash} />
+            <Stack.Screen name="Start" component={Start} />
+            <Stack.Screen name="GoogleLogin" component={GoogleLogin} />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Register" component={Register} />
+            <Stack.Screen name="Forget-password" component={ForgetPassword} />
+            <Stack.Screen name="Location" component={Location} />
+            <Stack.Screen name="MobileNumber" component={MobileNumber} />
+            <Stack.Screen name="Code" component={Code} />
+            <Stack.Screen name="Tabs" component={Tabs} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </GestureHandlerRootView>
+    </>
   );
 }
