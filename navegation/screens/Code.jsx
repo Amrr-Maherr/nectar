@@ -1,17 +1,31 @@
-import { TextInput, View } from "react-native";
+import { ActivityIndicator, TextInput, View } from "react-native";
 import BackButton from "../../components/ui/BackButton";
 import Title from "../../components/UiComponents/Title";
 import Description from "../../components/UiComponents/Description";
 import NextButton from "../../components/ui/NextButton";
 import { useState } from "react";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 export default function Code({ navigation }) {
   const [code, setCode] = useState("")
-  const HandelCode = () => {
+  const [loading, setLoading] = useState(false)
+  let CodeNum;
+  const HandelCode = async() => {
     if (!code || code.length < 4) {
       alert("please enter a valid code")
     } else {
-      navigation.navigate("Login");
+      try {
+        setLoading(true);
+        CodeNum = JSON.stringify(code);
+        await AsyncStorage.setItem("Code", CodeNum);
+        setTimeout(() => {
+          setLoading(false);
+          navigation.navigate("Login");
+        }, 2000)
+        console.log(CodeNum);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
     }
   }
   return (
@@ -46,7 +60,6 @@ export default function Code({ navigation }) {
           <Description
             DescriptionText="Code"
             FontSize={16}
-            FontWeight="300"
             color="#7C7C7C"
             FontWeight="500"
           />
@@ -74,11 +87,11 @@ export default function Code({ navigation }) {
             paddingVertical: 10,
           }}
         >
-          <NextButton
+          {loading ? <ActivityIndicator size="large" color="#53B175" /> : <NextButton
             onPress={() => {
               HandelCode()
             }}
-          />
+          />}
         </View>
       </View>
     </>
