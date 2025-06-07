@@ -96,6 +96,7 @@ export default function Login({ navigation }) {
               width: "100%",
               marginBottom: 20,
               fontSize: 16,
+              color: "black",
             }}
           />
           <TextInput
@@ -109,6 +110,7 @@ export default function Login({ navigation }) {
               borderBottomColor: "#E2E2E2",
               width: "100%",
               fontSize: 16,
+              color: "black",
             }}
           />
         </View>

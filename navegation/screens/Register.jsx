@@ -75,6 +75,7 @@ export default function Register({ navigation }) {
             onChangeText={setName}
             value={Name}
             placeholder="Enter your name"
+            placeholderTextColor="#7C7C7C"
             style={{
               borderBottomWidth: 1,
               borderBottomColor: "#E2E2E2",
@@ -87,12 +88,14 @@ export default function Register({ navigation }) {
             onChangeText={setEmail}
             value={Email}
             placeholder="Enter your email"
+            placeholderTextColor="#7C7C7C"
             style={{
               borderBottomWidth: 1,
               borderBottomColor: "#E2E2E2",
               width: "100%",
               marginBottom: 20,
               fontSize: 16,
+              color: "black",
             }}
           />
           <TextInput
@@ -100,11 +103,13 @@ export default function Register({ navigation }) {
             value={Password}
             secureTextEntry={true}
             placeholder="Enter your password"
+            placeholderTextColor="#7C7C7C"
             style={{
               borderBottomWidth: 1,
               borderBottomColor: "#E2E2E2",
               width: "100%",
               fontSize: 16,
+              color: "black",
             }}
           />
         </View>

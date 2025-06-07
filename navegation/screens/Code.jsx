@@ -76,6 +76,7 @@ export default function Code({ navigation }) {
               borderBottomColor: "#E2E2E2",
               fontSize: 16,
               width: "100%",
+              color: "black",
             }}
           />
         </View>
@@ -87,11 +88,15 @@ export default function Code({ navigation }) {
             paddingVertical: 10,
           }}
         >
-          {loading ? <ActivityIndicator size="large" color="#53B175" /> : <NextButton
-            onPress={() => {
-              HandelCode()
-            }}
-          />}
+          {loading ? (
+            <ActivityIndicator size="large" color="#53B175" />
+          ) : (
+            <NextButton
+              onPress={() => {
+                HandelCode();
+              }}
+            />
+          )}
         </View>
       </View>
     </>
