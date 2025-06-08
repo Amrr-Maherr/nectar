@@ -7,24 +7,30 @@ import useFetchData from "../../Hooks/useFetchData";
 export default function Shop() {
   const {loading,error,data} = useFetchData("products")
   return (
-    <><ScrollView>
+    <>
       <SafeAreaView>
-        <View
-          style={{
-            backgroundColor: "white",
-            alignItems: "center",
-            justifyContent: "center",
-            paddingTop: 10,
-          }}
-        >
-          <SearchInput />
-        </View>
-        
-          <View style={{ backgroundColor: "white" }}>
-            <ProductSection direction={false} data={data} error={error} loading={loading}/>
+        <ScrollView>
+          <View
+            style={{
+              backgroundColor: "white",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingTop: 10,
+            }}
+          >
+            <SearchInput />
           </View>
-      </SafeAreaView>
+
+          <View style={{ backgroundColor: "white" }}>
+            <ProductSection
+              direction={false}
+              data={data}
+              error={error}
+              loading={loading}
+            />
+          </View>
         </ScrollView>
+      </SafeAreaView>
     </>
   );
 }
