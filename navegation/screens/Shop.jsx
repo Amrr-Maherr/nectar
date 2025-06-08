@@ -19,7 +19,7 @@ export default function Shop() {
         </View>
         
           <View style={{ backgroundColor: "white" }}>
-            <ProductSection direction={false} />
+            {/* <ProductSection direction={false} /> */}
           </View>
       </SafeAreaView>
         </ScrollView>

@@ -1,22 +1,11 @@
-import { ScrollView, View } from "react-native";
+import { ScrollView, View,Text } from "react-native";
 import ProductCard from "./ProductCard";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import useFetchData from "../../Hooks/useFetchData"
 
-export default function ProductSection({ direction,productNumber }) {
-    const [data,setData] = useState([])
-    const GetData = async () => {
-        try {
-            let response = await axios.get("https://ecommerce.routemisr.com/api/v1/products")
-        setData(response.data.data.slice(0, productNumber));
-        console.log(response.data.data); 
-        } catch (error) {
-            console.log(error);
-        }
-    }
-    useEffect(() => {
-      GetData();
-    }, [productNumber]);
+export default function ProductSection({ direction,data,error,loading }) {
+
     return (
       <>
         <ScrollView
@@ -31,9 +20,13 @@ export default function ProductSection({ direction,productNumber }) {
               flexDirection: "row",
             }}
           >
-            {data.map((product) => (
+            {loading ? (
+              <Text>loading...</Text>
+            ) : (
+              data?.map((product) => (
                 <ProductCard product={product} key={product.id} />
-            ))}
+              ))
+            )}
           </View>
         </ScrollView>
       </>

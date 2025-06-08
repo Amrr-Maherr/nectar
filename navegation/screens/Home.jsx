@@ -14,30 +14,10 @@ import { useEffect, useState } from "react";
 import Title from "../../components/UiComponents/Title";
 import ProductSection from "../../components/ProductComponent/ProductSection";
 import HomeCategory from "../../components/HomeComponents/HomeCategory";
+import useFetchData from "../../Hooks/useFetchData";
 
 export default function Home() {
-  const [Loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-  }, []);
-
-  if (Loading) {
-    return (
-      <View
-        style={{
-          flex: 1,
-          backgroundColor: "white",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <ActivityIndicator size="large" color="#53B175" />
-      </View>
-    );
-  }
-
+  const { data, loading, error } = useFetchData("products",15);
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
       <ScrollView
@@ -64,9 +44,19 @@ export default function Home() {
             FontWeight="500"
           />
         </View>
-        <ProductSection direction={true} productNumber={10} />
+        <ProductSection
+          direction={true}
+          data={data}
+          error={error}
+          loading={loading}
+        />
         <HomeCategory />
-        <ProductSection direction={true} productNumber={5} />
+        <ProductSection
+          direction={true}
+          data={data}
+          error={error}
+          loading={loading}
+        />
       </ScrollView>
     </SafeAreaView>
   );
