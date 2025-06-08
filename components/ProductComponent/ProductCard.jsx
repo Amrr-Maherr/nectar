@@ -1,10 +1,10 @@
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import Title from "../UiComponents/Title";
 
 export default function ProductCard({product}) {
     return (
       <>
-        <View
+        <TouchableOpacity
           style={{
             height: "auto",
             width: 173,
@@ -46,13 +46,13 @@ export default function ProductCard({product}) {
               flexDirection: "row-reverse",
             }}
           >
-            <Image
-              style={{ width: 54, height: 54 }}
-              source={require("../../assets/Group 6813.png")}
-            />
+              <Image
+                style={{ width: 54, height: 54 }}
+                source={require("../../assets/Group 6813.png")}
+              />
             <Title titleText={product.price + "$"} />
           </View>
-        </View>
+        </TouchableOpacity>
       </>
     );
 }

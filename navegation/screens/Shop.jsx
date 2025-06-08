@@ -2,8 +2,10 @@ import { Text, View, StyleSheet, SafeAreaView } from "react-native";
 import ProductSection from "../../components/ProductComponent/ProductSection";
 import { ScrollView } from "react-native";
 import SearchInput from "../../components/UiComponents/SearchInput";
+import useFetchData from "../../Hooks/useFetchData";
 
 export default function Shop() {
+  const {loading,error,data} = useFetchData("products")
   return (
     <><ScrollView>
       <SafeAreaView>
@@ -19,7 +21,7 @@ export default function Shop() {
         </View>
         
           <View style={{ backgroundColor: "white" }}>
-            {/* <ProductSection direction={false} /> */}
+            <ProductSection direction={false} data={data} error={error} loading={loading}/>
           </View>
       </SafeAreaView>
         </ScrollView>
